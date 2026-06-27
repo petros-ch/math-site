@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Θεματολογία — Μαθηματικά Γ΄ Λυκείου</title>
+  <meta name="description" content="Πλήρης θεματολογία Μαθηματικών Γ΄ Λυκείου Προσανατολισμού">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .chapter {
+      margin-bottom: 56px;
+    }
+    .chapter-header {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 20px;
+    }
+    .chapter-num {
+      font-family: var(--ff-display);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      opacity: 0.35;
+      min-width: 52px;
+      line-height: 1;
+    }
+    .chapter-title {
+      font-family: var(--ff-display);
+      font-size: clamp(1.2rem,2.5vw,1.6rem);
+      color: var(--white);
+    }
+    .chapter-sub { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
+    .subtopics {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .subtopic {
+      display: flex; align-items: flex-start; gap: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      transition: border-color .18s;
+    }
+    .subtopic:hover { border-color: rgba(245,200,67,0.3); }
+    .subtopic-sym {
+      font-family: var(--ff-display);
+      font-size: 1.2rem;
+      color: var(--gold);
+      min-width: 28px;
+      margin-top: 1px;
+    }
+    .subtopic-name { font-size: 0.9rem; color: var(--white); line-height: 1.4; }
+    .subtopic-note { font-size: 0.76rem; color: var(--muted); margin-top: 3px; }
+    .formula-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 32px;
+      font-family: var(--ff-mono);
+      font-size: 0.9rem;
+      color: var(--ice);
+      line-height: 2;
+    }
+    .formula-box strong { color: var(--gold); }
+  </style>
+</head>
+<body>
+<canvas id="star-bg"></canvas>
+<div class="math-float"></div>
+
+<nav>
+  <a class="nav-logo" href="../index.html">ΜΑΘΗΜΑΤΙΚΑ <span>Γ΄ Λυκείου</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Αρχική</a></li>
+    <li><a href="topics.html">Θεματολογία</a></li>
+    <li><a href="videos.html">Βίντεο</a></li>
+    <li><a href="epal.html">ΕΠΑ.Λ.</a></li>
+    <li><a href="about.html">Σχετικά</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Μενού">☰</button>
+</nav>
+
+<main class="page">
+  <section>
+    <p class="section-label reveal">Ύλη Γ΄ Λυκείου</p>
+    <h1 class="section-title reveal">Θεματολογία Προσανατολισμού</h1>
+    <p class="section-desc reveal">Πλήρης κάλυψη των τριών κεφαλαίων της ύλης για τις Πανελλαδικές Εξετάσεις.</p>
+
+    <!-- CHAPTER 1 -->
+    <div class="chapter reveal">
+      <div class="chapter-header">
+        <div class="chapter-num">01</div>
+        <div>
+          <div class="chapter-title">Συναρτήσεις — Όρια — Συνέχεια</div>
+          <div class="chapter-sub">Θεωρία & Ασκήσεις</div>
+        </div>
+      </div>
+      <div class="subtopics">
+        <div class="subtopic"><span class="subtopic-sym">f</span><div><div class="subtopic-name">Πραγματικοί Αριθμοί</div><div class="subtopic-note">§1.1 — Ιδιότητες, απόλυτη τιμή</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">∞</span><div><div class="subtopic-name">Όρια Συναρτήσεων</div><div class="subtopic-note">§1.2 — Ορισμός, ιδιότητες</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">lim</span><div><div class="subtopic-name">Υπολογισμός Ορίων</div><div class="subtopic-note">§1.3 — Τεχνικές, αδιόριστες μορφές</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">∞</span><div><div class="subtopic-name">Όρια στο Άπειρο</div><div class="subtopic-note">§1.4 — Συμπεριφορά για x→±∞</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">≈</span><div><div class="subtopic-name">Ασύμπτωτες</div><div class="subtopic-note">§1.5 — Οριζόντιες, κατακόρυφες, πλάγιες</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">~</span><div><div class="subtopic-name">Συνέχεια Συναρτήσεων</div><div class="subtopic-note">§1.6 — ΘΕΤ, θεώρημα Bolzano</div></div></div>
+      </div>
+      <div class="formula-box reveal">
+        <strong>Κανόνας De L'Hôpital:</strong> lim f(x)/g(x) = lim f'(x)/g'(x) &nbsp;[0/0 ή ∞/∞]<br>
+        <strong>Σημαντικά Όρια:</strong> lim(sinx/x) = 1 &nbsp;|&nbsp; lim(1+1/x)ˣ = e
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- CHAPTER 2 -->
+    <div class="chapter reveal">
+      <div class="chapter-header">
+        <div class="chapter-num">02</div>
+        <div>
+          <div class="chapter-title">Διαφορικός Λογισμός</div>
+          <div class="chapter-sub">Παράγωγοι & Εφαρμογές</div>
+        </div>
+      </div>
+      <div class="subtopics">
+        <div class="subtopic"><span class="subtopic-sym">f'</span><div><div class="subtopic-name">Παράγωγος Συνάρτησης</div><div class="subtopic-note">§2.1 — Ορισμός, παραγωγισιμότητα</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">Δ</span><div><div class="subtopic-name">Κανόνες Παραγώγισης</div><div class="subtopic-note">§2.2 — Άθροισμα, γινόμενο, πηλίκο</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">∘</span><div><div class="subtopic-name">Παράγωγος Σύνθεσης</div><div class="subtopic-note">§2.3 — Chain rule</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">↗</span><div><div class="subtopic-name">Μονοτονία</div><div class="subtopic-note">§2.4 — Αύξουσα/φθίνουσα συνάρτηση</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">⌒</span><div><div class="subtopic-name">Ακρότατα</div><div class="subtopic-note">§2.5 — Τοπικά max/min, καθολικά</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">∪∩</span><div><div class="subtopic-name">Κυρτότητα — Σημεία Καμπής</div><div class="subtopic-note">§2.6 — f''(x), σχεδίαση</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">✎</span><div><div class="subtopic-name">Μελέτη Συνάρτησης</div><div class="subtopic-note">§2.7 — Πλήρης μελέτη & γράφημα</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">≡</span><div><div class="subtopic-name">ΘΜΤ Lagrange</div><div class="subtopic-note">§2.8 — Εφαρμογές Μέσης Τιμής</div></div></div>
+      </div>
+      <div class="formula-box reveal">
+        <strong>Βασικές Παράγωγοι:</strong><br>
+        (xⁿ)' = n·xⁿ⁻¹ &nbsp;|&nbsp; (eˣ)' = eˣ &nbsp;|&nbsp; (lnx)' = 1/x<br>
+        (sinx)' = cosx &nbsp;|&nbsp; (cosx)' = -sinx &nbsp;|&nbsp; (tanx)' = 1/cos²x
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- CHAPTER 3 -->
+    <div class="chapter reveal">
+      <div class="chapter-header">
+        <div class="chapter-num">03</div>
+        <div>
+          <div class="chapter-title">Ολοκληρωτικός Λογισμός</div>
+          <div class="chapter-sub">Αόριστα & Ορισμένα Ολοκληρώματα</div>
+        </div>
+      </div>
+      <div class="subtopics">
+        <div class="subtopic"><span class="subtopic-sym">∫</span><div><div class="subtopic-name">Αόριστο Ολοκλήρωμα</div><div class="subtopic-note">§3.1 — Ορισμός, βασικά ολοκληρώματα</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">∫</span><div><div class="subtopic-name">Μέθοδοι Ολοκλήρωσης</div><div class="subtopic-note">§3.2 — Αντικατάσταση, κατά μέρη</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">∫ᵃᵇ</span><div><div class="subtopic-name">Ορισμένο Ολοκλήρωμα</div><div class="subtopic-note">§3.3 — Ορισμός Riemann, ΘΘΑ</div></div></div>
+        <div class="subtopic"><span class="subtopic-sym">◻</span><div><div class="subtopic-name">Εμβαδόν Χωρίων</div><div class="subtopic-note">§3.4 — Μεταξύ καμπυλών</div></div></div>
+      </div>
+      <div class="formula-box reveal">
+        <strong>Θεμελιώδες Θεώρημα:</strong> ∫ᵃᵇ f(x)dx = F(b) − F(a)<br>
+        <strong>Γραμμικότητα:</strong> ∫[af(x)+bg(x)]dx = a∫f(x)dx + b∫g(x)dx
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <div class="footer-logo">ΜΑΘΗΜΑΤΙΚΑ · Γ΄ Λυκείου</div>
+  <div class="footer-copy">© 2024 @petrosch</div>
+  <div class="footer-yt"><a href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">▶ YouTube</a></div>
+</footer>
+
+<script src="../js/shared.js"></script>
+</body>
+</html>

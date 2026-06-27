@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Σχετικά — Μαθηματικά Γ΄ Λυκείου</title>
+  <meta name="description" content="Πληροφορίες για το κανάλι Μαθηματικά Γ Λυκείου @petrosch">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .about-hero {
+      display: flex; flex-wrap: wrap; gap: 48px;
+      align-items: flex-start;
+      margin-bottom: 64px;
+    }
+    .about-avatar {
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1a0e40, #2a1060);
+      border: 2px solid rgba(245,200,67,0.4);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--ff-display);
+      font-size: 3.5rem;
+      color: var(--gold);
+      flex-shrink: 0;
+      box-shadow: 0 0 40px rgba(245,200,67,0.15);
+    }
+    .about-bio h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(1.4rem,3vw,2rem);
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .about-handle {
+      font-family: var(--ff-mono);
+      font-size: 0.82rem;
+      color: var(--violet);
+      letter-spacing: 0.12em;
+      margin-bottom: 16px;
+    }
+    .about-bio p { color: var(--muted); line-height: 1.8; max-width: 540px; }
+    .social-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .social-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 6px;
+      font-size: 0.83rem; font-weight: 600;
+      transition: all .18s; cursor: pointer;
+    }
+    .social-yt {
+      background: rgba(255,0,0,0.12);
+      border: 1px solid rgba(255,60,60,0.3);
+      color: #ff6060;
+    }
+    .social-yt:hover { background: rgba(255,0,0,0.22); }
+    .mission-box {
+      background: linear-gradient(135deg, rgba(180,138,255,0.08), rgba(245,200,67,0.05));
+      border: 1px solid rgba(180,138,255,0.2);
+      border-radius: 12px;
+      padding: clamp(24px,4vw,44px);
+      margin-bottom: 56px;
+    }
+    .mission-box h3 {
+      font-family: var(--ff-display);
+      font-size: 1.3rem;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .mission-box p { color: var(--muted); line-height: 1.8; }
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 16px 20px;
+      font-weight: 600;
+      color: var(--white);
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      user-select: none;
+    }
+    .faq-q:hover { color: var(--gold); }
+    .faq-q .arrow { color: var(--muted); transition: transform .2s; font-size: 0.9rem; }
+    .faq-item.open .faq-q .arrow { transform: rotate(180deg); color: var(--gold); }
+    .faq-a {
+      padding: 0 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s, padding .3s;
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-a { max-height: 200px; padding: 0 20px 16px; }
+  </style>
+</head>
+<body>
+<canvas id="star-bg"></canvas>
+<div class="math-float"></div>
+
+<nav>
+  <a class="nav-logo" href="../index.html">ΜΑΘΗΜΑΤΙΚΑ <span>Γ΄ Λυκείου</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Αρχική</a></li>
+    <li><a href="topics.html">Θεματολογία</a></li>
+    <li><a href="videos.html">Βίντεο</a></li>
+    <li><a href="epal.html">ΕΠΑ.Λ.</a></li>
+    <li><a href="about.html">Σχετικά</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Μενού">☰</button>
+</nav>
+
+<main class="page">
+  <section>
+    <p class="section-label reveal">Το κανάλι</p>
+    <h1 class="section-title reveal">Σχετικά</h1>
+
+    <!-- ABOUT HERO -->
+    <div class="about-hero reveal">
+      <div class="about-avatar">π</div>
+      <div class="about-bio">
+        <h2>Μαθηματικά — Γ΄ Λυκείου</h2>
+        <div class="about-handle">@petrosch · youtube.com/@petrosch</div>
+        <p>Κανάλι αφιερωμένο στα μαθηματικά Γ΄ Λυκείου Προσανατολισμού και ΕΠΑ.Λ. Ασκήσεις βήμα–βήμα, με έμφαση στην κατανόηση και όχι στην απομνημόνευση.</p>
+        <div class="social-links">
+          <a class="social-btn social-yt" href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">
+            ▶ YouTube @petrosch
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MISSION -->
+    <div class="mission-box reveal">
+      <h3>🎯 Στόχος του Καναλιού</h3>
+      <p>Να βοηθήσει κάθε μαθητή Γ΄ Λυκείου να κατανοήσει τα μαθηματικά σε βάθος — με ασκήσεις που αναλύονται βήμα-βήμα, χωρίς να παρακάμπτονται βήματα ή να «μαγεύονται» αποτελέσματα. Τα βίντεο καλύπτουν πλήρη ύλη τόσο για τον Προσανατολισμό όσο και για το ΕΠΑ.Λ., δωρεάν για όλους.</p>
+    </div>
+
+    <hr class="divider" style="margin: 0 0 48px 0;">
+
+    <!-- FAQ -->
+    <p class="section-label reveal">Ερωτήσεις</p>
+    <h2 class="section-title reveal">Συχνές Ερωτήσεις</h2>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q">Τα βίντεο είναι δωρεάν; <span class="arrow">▼</span></div>
+        <div class="faq-a">Ναι, όλα τα βίντεο είναι εντελώς δωρεάν στο YouTube. Δεν χρειάζεται συνδρομή ή εγγραφή.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Καλύπτει και ύλη ΕΠΑ.Λ.; <span class="arrow">▼</span></div>
+        <div class="faq-a">Ναι! Υπάρχουν ξεχωριστά βίντεο για ΕΠΑ.Λ. — δες τη σελίδα <a href="epal.html" style="color:var(--gold)">ΕΠΑ.Λ.</a> για λεπτομέρειες.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Πού μπορώ να βρω όλα τα βίντεο; <span class="arrow">▼</span></div>
+        <div class="faq-a">Στη σελίδα <a href="videos.html" style="color:var(--gold)">Βίντεο</a> εδώ ή απευθείας στο <a href="https://www.youtube.com/@petrosch" target="_blank" style="color:var(--gold)">YouTube κανάλι @petrosch</a>.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Ακολουθεί την ύλη των Πανελλαδικών; <span class="arrow">▼</span></div>
+        <div class="faq-a">Ναι, τα βίντεο ακολουθούν πιστά το αναλυτικό πρόγραμμα του Υπουργείου Παιδείας για τη Γ΄ Λυκείου.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Υπάρχουν βίντεο για Α΄ και Β΄ Λυκείου; <span class="arrow">▼</span></div>
+        <div class="faq-a">Το κανάλι εστιάζει κυρίως στη Γ΄ Λυκείου. Ελέγξτε το κανάλι για τυχόν πρόσθετο υλικό.</div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <div class="footer-logo">ΜΑΘΗΜΑΤΙΚΑ · Γ΄ Λυκείου</div>
+  <div class="footer-copy">© 2024 @petrosch — Δωρεάν εκπαιδευτικό υλικό</div>
+  <div class="footer-yt"><a href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">▶ YouTube</a></div>
+</footer>
+
+<script src="../js/shared.js"></script>
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
