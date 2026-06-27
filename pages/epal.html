@@ -1,76 +1,117 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ΕΠΑ.Λ. — Μαθηματικά Γ΄ Λυκείου</title>
-  <meta name="description" content="Μαθηματικά Γ΄ ΕΠΑ.Λ. — Ασκήσεις και θεωρία">
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    .epal-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, rgba(180,138,255,0.2), rgba(245,200,67,0.1));
-      border: 1px solid rgba(180,138,255,0.4);
-      color: var(--violet);
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 0.78rem;
-      letter-spacing: 0.15em;
-      font-family: var(--ff-mono);
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      display: inline-block;
-    }
-    .diff-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 32px;
-      font-size: 0.88rem;
-    }
-    .diff-table th {
-      background: var(--surface);
-      color: var(--gold);
-      font-family: var(--ff-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 12px 16px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-    .diff-table td {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--border);
-      color: var(--muted);
-      vertical-align: top;
-    }
-    .diff-table tr:hover td { background: rgba(255,255,255,0.02); }
-    .diff-table td:first-child { color: var(--white); font-weight: 500; }
-    .tag {
-      display: inline-block;
-      padding: 3px 10px;
-      border-radius: 4px;
-      font-size: 0.72rem;
-      font-family: var(--ff-mono);
-    }
-    .tag-yes { background: rgba(100,200,100,0.12); color: #80cc80; }
-    .tag-no  { background: rgba(200,100,100,0.12); color: #cc8080; }
-    .tag-diff{ background: rgba(245,200,67,0.12);  color: var(--gold); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Γ΄ ΕΠΑ.Λ. — ΜΑΘΗΜΑΤΙΚΑ</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .pros-content {
+            position: relative; z-index: 1;
+            padding-top: 62px;
+        }
+        .pros-header {
+            padding: clamp(40px,6vw,80px) clamp(16px,4vw,48px) 0;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .pros-header h1 {
+            font-family: var(--ff-display);
+            font-size: clamp(28px,4vw,48px);
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+        .pros-header p { color: var(--muted); font-size: 0.9rem; }
+        .pros-main {
+            max-width: 1100px;
+            margin: 32px auto 0;
+            padding: 0 clamp(16px,4vw,48px) 80px;
+        }
+        .pros-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: border-color .2s;
+        }
+        .pros-section:hover { border-color: rgba(245,200,67,0.25); }
+        .pros-section-title {
+            font-family: var(--ff-display);
+            font-size: 1.05rem;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+        .pros-playlist-info {
+            font-size: 0.78rem;
+            color: var(--muted);
+            font-family: var(--ff-mono);
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+        }
+        .pros-video {
+            border-left: 3px solid rgba(245,200,67,0.4);
+            padding: 6px 16px;
+            margin: 4px 0;
+            background: rgba(255,255,255,0.02);
+            border-radius: 0 6px 6px 0;
+        }
+        .pros-video h2 {
+            font-size: 0.9rem;
+            color: var(--white);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .pros-video-title {
+            font-size: 1rem;
+            color: var(--white) !important;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        .pros-video a {
+            color: var(--white);
+            font-size: 1rem;
+            font-family: inherit;
+            font-weight: 500;
+            transition: color .15s;
+            word-break: break-word;
+            text-decoration: none;
+        }
+        .pros-video a:hover { color: var(--gold); }
+        .pros-divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 6px 0;
+        }
+        .pros-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--ff-mono);
+            font-size: 0.75rem;
+            color: var(--muted);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 4px 12px;
+            margin-right: 8px;
+        }
+        .pros-stat span { color: var(--gold); font-weight: 700; }
+    </style>
 </head>
 <body>
 <canvas id="star-bg"></canvas>
 <div class="math-float"></div>
 
 <nav>
-  <a class="nav-logo" href="../index.html">ΜΑΘΗΜΑΤΙΚΑ <span>Γ΄ Λυκείου</span></a>
+  <a class="nav-logo" href="../index.html">ΜΑΘΗΜΑΤΙΚΑ</a>
   <ul class="nav-links">
     <li><a href="../index.html">Αρχική</a></li>
     <li class="nav-dropdown">
       <a href="#" class="nav-dropdown-toggle">Τάξη ▾</a>
       <ul class="nav-dropdown-menu">
         <li><a href="prosanatolismos.html">Γ΄ ΓΕΛ Προσανατολισμός</a></li>
-        <li><a href="epal.html">Γ΄ ΕΠΑΛ</a></li>
+        <li><a href="epal.html" class="active">Γ΄ ΕΠΑΛ</a></li>
         <li><a href="videos.html">Β΄ Λυκείου Άλγεβρα</a></li>
       </ul>
     </li>
@@ -81,113 +122,342 @@
   <button class="nav-hamburger" aria-label="Μενού">☰</button>
 </nav>
 
-<main class="page">
-  <section>
-    <div class="epal-badge reveal">Γ΄ ΕΠΑ.Λ.</div>
-    <h1 class="section-title reveal">Μαθηματικά ΕΠΑ.Λ.</h1>
-    <p class="section-desc reveal">Ασκήσεις και θεωρία για τη Γ΄ τάξη Επαγγελματικού Λυκείου — στοχευμένη προετοιμασία για τις εξετάσεις.</p>
+<div class="pros-content">
+  <div class="pros-header">
+    <p class="section-label">Τάξη · Γ΄ ΕΠΑ.Λ.</p>
+    <h1 style="font-family:var(--ff-display);font-size:clamp(28px,4vw,48px);color:var(--white);margin-bottom:8px;">Μαθηματικά <em style="font-style:normal;color:var(--gold)">ΕΠΑ.Λ.</em></h1>
+    <p>Όλα τα βίντεο του καναλιού @petrosch για τα Μαθηματικά Γ΄ ΕΠΑ.Λ.</p>
+    <div style="margin-top:16px;">
+      <span class="pros-stat"><span>58</span> βίντεο</span>
+      <span class="pros-stat"><span>12</span> playlists</span>
+    </div>
+  </div>
+  <div class="pros-main">
 
-    <!-- Video EPAL -->
-    <div class="video-grid reveal" style="margin-bottom: 56px;">
-      <div class="video-card">
-        <div class="video-thumb">
-          <iframe src="https://www.youtube.com/embed/J6_XNI9tHus" loading="lazy"
-            title="Βασικές γνώσεις ΕΠΑ.Λ." allowfullscreen></iframe>
+    <div class="pros-section">
+        <h2 class="pros-section-title">(Γ ΕΠΑ.Λ.) 1.1 Συναρτήσεις (Α.Πεδίο ορισμού - Τιμή της f)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 8
         </div>
-        <div class="video-info">
-          <div class="video-title">Βασικές Γνώσεις Μαθηματικών Γ΄ ΕΠΑ.Λ.</div>
-          <div class="video-meta">ΕΠΑ.Λ. · Εισαγωγή</div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=PlaZklUCX7s" target="_blank">1.1 Συναρτήσεις (Πεδίο ορισμού - Τιμή της f) - Άσκηση 01</a></p>
+            <hr class="pros-divider">
         </div>
-      </div>
-      <div class="video-card">
-        <div class="video-thumb">
-          <iframe src="https://www.youtube.com/embed/PE3539SlJmY" loading="lazy"
-            title="Αποδείξεις 2ου κεφαλαίου ΕΠΑ.Λ." allowfullscreen></iframe>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=c5bY71YA2RE" target="_blank">1.1 Συναρτήσεις (Πεδίο ορισμού με κλάσμα - Τιμή της f) - Άσκηση 02</a></p>
+            <hr class="pros-divider">
         </div>
-        <div class="video-info">
-          <div class="video-title">Αποδείξεις 2ου Κεφαλαίου ΕΠΑ.Λ.</div>
-          <div class="video-meta">ΕΠΑ.Λ. · Κεφ. 2 · Απρίλιος 2025</div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=Jw6S8Rezt3Y" target="_blank">1.1 Συναρτήσεις (Πεδίο ορισμού με κλάσμα - Τιμή της f) - Άσκηση 03</a></p>
+            <hr class="pros-divider">
         </div>
-      </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=mUQ-TDCYBUQ" target="_blank">1.1 Συναρτήσεις (Πεδίο ορισμού με κλάσμα - Τιμή της f) - Άσκηση 04</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=Ay7CJ1jXXCY" target="_blank">1.1 Συναρτήσεις (Πεδίο ορισμού με κλάσμα) - Άσκηση 07</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=6FR7z1yhAio" target="_blank">1.1 Συναρτήσεις (Πεδίο ορισμού με κλάσμα) - Άσκηση 08</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=KcwotfWgdeA" target="_blank">1.1 Συναρτήσεις (Πεδίο ορισμού με ρίζα - Τιμή της f) - Άσκηση 05</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=W-v-FUWPiXE" target="_blank">1.1 Συναρτήσεις (Πεδίο ορισμού με ρίζα) - Άσκηση 06</a></p>
+            <hr class="pros-divider">
+        </div>
     </div>
 
-    <hr class="divider" style="margin: 0 0 48px 0;">
-
-    <!-- Σύγκριση -->
-    <p class="section-label reveal">Σύγκριση Ύλης</p>
-    <h2 class="section-title reveal">Προσανατολισμός vs ΕΠΑ.Λ.</h2>
-    <p class="section-desc reveal">Ποια κεφάλαια είναι κοινά και που διαφέρουν οι δύο κατευθύνσεις.</p>
-
-    <table class="diff-table reveal">
-      <thead>
-        <tr>
-          <th>Ενότητα</th>
-          <th>Προσανατολισμός</th>
-          <th>ΕΠΑ.Λ.</th>
-          <th>Σημείωση</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Πραγματικοί Αριθμοί</td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td>Κοινή βάση</td>
-        </tr>
-        <tr>
-          <td>Όρια Συναρτήσεων</td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td>Λιγότερη βαθύτητα στο ΕΠΑ.Λ.</td>
-        </tr>
-        <tr>
-          <td>Κανόνας De L'Hôpital</td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td><span class="tag tag-no">✗ Όχι</span></td>
-          <td>Μόνο Προσανατολισμός</td>
-        </tr>
-        <tr>
-          <td>Παράγωγος — Ορισμός</td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td>Κοινό</td>
-        </tr>
-        <tr>
-          <td>Μελέτη Συνάρτησης</td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td><span class="tag tag-diff">~ Μερικώς</span></td>
-          <td>Χωρίς κυρτότητα στο ΕΠΑ.Λ.</td>
-        </tr>
-        <tr>
-          <td>Αόριστο Ολοκλήρωμα</td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td>Κοινό</td>
-        </tr>
-        <tr>
-          <td>Ολοκλήρωση κατά μέρη</td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td><span class="tag tag-no">✗ Όχι</span></td>
-          <td>Μόνο Προσανατολισμός</td>
-        </tr>
-        <tr>
-          <td>Εμβαδόν χωρίων</td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td><span class="tag tag-yes">✓ Ναι</span></td>
-          <td>Κοινό</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div style="text-align:center; padding: 48px 0 20px;">
-      <a class="btn btn-gold" href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">▶ Βίντεο ΕΠΑ.Λ. στο YouTube</a>
+    <div class="pros-section">
+        <h2 class="pros-section-title">(Γ ΕΠΑ.Λ.) 1.1 Συναρτήσεις (Β.Σημεία Τομής & Σχετική Θέση)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 5
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=RxU25ROGeVA" target="_blank">1.1 Συναρτήσεις (Α.Σημεία Τομής με άξονες x'x και y'y) - Άσκηση 01</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=c2Y2CP4C4-E" target="_blank">1.1 Συναρτήσεις (Α.Σημεία Τομής με άξονες x'x και y'y) - Άσκηση 02</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=vJn-mOdnM9o" target="_blank">1.1 Συναρτήσεις (Α.Σημεία Τομής με άξονες x'x και y'y) - Άσκηση 03</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=1eJzN4kHn_s" target="_blank">1.1 Συναρτήσεις (Β.Σημεία Τομής Cf και Cg) - Άσκηση 01</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=KAVhQcvXnmI" target="_blank">1.1 Συναρτήσεις (Β.Σημεία Τομής Cf και Cg) - Άσκηση 02</a></p>
+            <hr class="pros-divider">
+        </div>
     </div>
-  </section>
-</main>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">(Γ ΕΠΑ.Λ.) 1.1 Συναρτήσεις (Γ.Πράξεις με συναρτήσεις)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 1
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=j_z6HeZXYeY" target="_blank">1.1 Συναρτήσεις (Πράξεις συναρτήσεων) - Άσκηση 01</a></p>
+            <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">(Γ ΕΠΑ.Λ.) 1.1 Συναρτήσεις (Δ.Όρια)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 12
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=mpuLPE6FbiM" target="_blank">1.1 Συναρτήσεις (Α.Όριο με ιδιότητες) - Άσκηση 01</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=hPv2ZSQlULY" target="_blank">1.1 Συναρτήσεις (Α.Όριο με ιδιότητες) - Άσκηση 02</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=EpFoVeBkP7g" target="_blank">1.1 Συναρτήσεις (Β.Όριο) - Άσκηση 01</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=YcW2AGZ-p0w" target="_blank">1.1 Συναρτήσεις (Γ.Όριο ρητής 0/0) - Άσκηση 01</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=AtaeqWK9J_Y" target="_blank">1.1 Συναρτήσεις (Γ.Όριο ρητής 0/0) - Άσκηση 02</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=uI2wt1Omieo" target="_blank">1.1 Συναρτήσεις (Γ.Όριο ρητής 0/0) - Άσκηση 03</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=oXIxAgUZKQs" target="_blank">1.1 Συναρτήσεις (Γ.Όριο ρητής 0/0) - Άσκηση 04</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=NS5MltXQ6bQ" target="_blank">1.1 Συναρτήσεις (Γ.Όριο ρητής 0/0) - Άσκηση 05</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=UsFLNbUB1H4" target="_blank">1.1 Συναρτήσεις (Δ.Όριο με ρίζα  0/0) - Άσκηση 01</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=vKwlOGgsYO4" target="_blank">1.1 Συναρτήσεις (Δ.Όριο με ρίζα  0/0) - Άσκηση 02</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=FbOirwIcbRo" target="_blank">1.1 Συναρτήσεις (Δ.Όριο με ρίζα  0/0) - Άσκηση 03</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=NQwWgodTf0E" target="_blank">1.1 Συναρτήσεις (Δ.Όριο με ρίζα 0/0) - Άσκηση 04</a></p>
+            <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">(Γ ΕΠΑ.Λ.) 1.1 Συναρτήσεις (Ε. Συνέχεια)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 4
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=gxYjPNZOwNg" target="_blank">1.1 Συναρτήσεις (Α.Συνέχεια στο x0) - Άσκηση 01</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=NbUv733l-v8" target="_blank">1.1 Συναρτήσεις (Α.Συνέχεια στο x0) - Άσκηση 02</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=U9vcOyZF788" target="_blank">1.1 Συναρτήσεις (Β.Συνέχεια στο x0 με παράμετρο) - Άσκηση 01</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=OKg79P04A9M" target="_blank">1.1 Συναρτήσεις (Β.Συνέχεια στο x0 με παράμετρο) - Άσκηση 02</a></p>
+            <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">(Γ ΕΠΑ.Λ.) 1.2 Η έννοια της παραγώγου</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 2
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=wn6H91LYXUE" target="_blank">1.2 Η έννοια της παραγώγου (Παράγωγος στο x0 με ορισμό) - Άσκηση 01</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=yqpLICClKw0" target="_blank">1.2 Η έννοια της παραγώγου (Παράγωγος στο x0 με ορισμό) - Άσκηση 02</a></p>
+            <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">(Γ ΕΠΑ.Λ.) 1.3 Παράγωγος συνάρτησης</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 1
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=Lr6Htufy7kw" target="_blank">1.3 Παράγωγος συνάρτησης - Άσκηση 01</a></p>
+            <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">(Γ ΕΠΑ.Λ.) 1.4 Εφαρμογές των παραγώγων (Α.Μονοτονία - Ακρότατα)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 3
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=AxULT66w_YM" target="_blank">1.4 Εφαρμογές των παραγώγων (Β.Μονοτονία Ακρότατα) - Άσκηση 01</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=idvRFwJTE-0" target="_blank">1.4 Εφαρμογές των παραγώγων (Β.Μονοτονία-Ακρότατα) - Άσκηση 02</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=8weuOaQc8GE" target="_blank">1.4 Εφαρμογές των παραγώγων (Β.Μονοτονία-Ακρότατα) - Άσκηση 03</a></p>
+            <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">(Γ ΕΠΑ.Λ.) 1.4 Εφαρμογές των παραγώγων (Β.Εφαπτομένη γραφικής παράστασης)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 10
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=tjoUe0xnQf8" target="_blank">1.4 Εφαρμογές των παραγώγων (Α.Εφαπτόμενη) - Άσκηση 01 (Γνωστό σημείο επαφής)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=UNeKlRhfeaY" target="_blank">1.4 Εφαρμογές των παραγώγων (Α.Εφαπτόμενη) - Άσκηση 02 (Γνωστό σημείο επαφής)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=P6H9YqfilhY" target="_blank">1.4 Εφαρμογές των παραγώγων (Α.Εφαπτόμενη) - Άσκηση 03 (Γνωστή τετμημένη σημείου επαφής)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=Zx1whsucyHU" target="_blank">1.4 Εφαρμογές των παραγώγων (Α.Εφαπτόμενη) - Άσκηση 04 - Εφαπτομένη παράλληλη σε γνωστή ευθεία</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=MxWbCsROI2w" target="_blank">1.4 Εφαρμογές των παραγώγων (Α.Εφαπτόμενη) - Άσκηση 05 (Εφαπτομένη παράλληλη σε γνωστή ευθεία)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=1guiRRCgmfY" target="_blank">1.4 Εφαρμογές των παραγώγων (Α.Εφαπτόμενη) - Άσκηση 06 (Εφαπτομένη κάθετη σε γνωστή ευθεία)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=M2-iuCh_OeM" target="_blank">1.4 Εφαρμογές των παραγώγων (Α.Εφαπτόμενη) - Άσκηση 07 (Εφαπτομένη κάθετη σε γνωστή ευθεία)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=oOc2t0X83ms" target="_blank">1.4 Εφαρμογές των παραγώγων (Α.Εφαπτόμενη) - Άσκηση 08 (Οριζόντια εφαπτομένη)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=HYZsPo4DanE" target="_blank">1.4 Εφαρμογές των παραγώγων (Α.Εφαπτόμενη)- Άσκηση 09 (Εφαπτομένη που σχηματίζει γωνία ω με τον x'x)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=8SQaa6UlraU" target="_blank">1.4 Εφαρμογές των παραγώγων (Α.Εφαπτόμενη)- Άσκηση 10 (Εφαπτομένη που σχηματίζει γωνία ω με τον x'x)</a></p>
+            <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">(Γ ΕΠΑ.Λ.) 2.2 Παρουσίαση στατιστικών δεδομένων</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 6
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=u6UwSL1ehUY" target="_blank">2.2 Παρουσίαση στατιστικών δεδομένων - Άσκηση 01 (Συχνότητα και Αθροιστική συχνότητα)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=4tiNlezTXrE" target="_blank">2.2 Παρουσίαση στατιστικών δεδομένων - Άσκηση 02 (Ni, fi% και Fi%)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=31W14CEUvUY" target="_blank">2.2 Παρουσίαση στατιστικών δεδομένων - Άσκηση 03 (Διάγραμμα, Πολύγωνο και Κυκλικό διάγραμμα)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=O2RbAGoSQkU" target="_blank">2.2 Παρουσίαση στατιστικών δεδομένων - Άσκηση 04 (Ραβδόγραμμα και Κυκλικό διάγραμμα)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=rytqgTZqxlc" target="_blank">2.2 Παρουσίαση στατιστικών δεδομένων - Άσκηση 05 (Ομαδοποίηση, Ιστόγραμμα)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=JA6AhOr2noA" target="_blank">2.2 Παρουσίαση στατιστικών δεδομένων - Άσκηση 06 (Χρονόγραμμα)</a></p>
+            <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">(Γ ΕΠΑ.Λ.) 2.3 Μέτρα θέσης και διασποράς</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 4
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=UTWF0_KoKas" target="_blank">2.3 Μέτρα θέσης και διασποράς - Άσκηση 01 (σε Παρατηρήσεις)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=BYAIDrc6ckA" target="_blank">2.3 Μέτρα θέσης και διασποράς - Άσκηση 02 (Παρατηρήσεις, φτιάχνω πίνακα)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=u_6jE5UxRkw" target="_blank">2.3 Μέτρα θέσης και διασποράς - Άσκηση 03 (σε πίνακα)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=A0lQZZfqrKM" target="_blank">2.3 Μέτρα θέσης και διασποράς - Άσκηση 04 (Ομαδοποιημένα δεδομένα)</a></p>
+            <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">(Γ ΕΠΑ.Λ.) 2.3 Μέτρα θέσης και διασποράς (Β. Κανονική Κατανομή)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 2
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=dHPokeJ8knM" target="_blank">2.3 Μέτρα θέσης και διασποράς - Άσκηση 01 (Κανονική Κατανομή)</a></p>
+            <hr class="pros-divider">
+        </div>
+        <div class="pros-video">
+            <p class="pros-video-title"><a href="https://www.youtube.com/watch?v=6RUKUnc_KhI" target="_blank">2.3 Μέτρα θέσης και διασποράς - Άσκηση 02 (Κανονική Κατανομή)</a></p>
+            <hr class="pros-divider">
+        </div>
+    </div>
+  </div>
+</div>
+
+<footer class="pros-footer" style="text-align:center; margin-top:40px; padding:20px; color:#666; background:rgba(255,255,255,0.9); border-radius:10px;">
+
 
 <footer>
   <div class="footer-logo">ΜΑΘΗΜΑΤΙΚΑ · Γ΄ Λυκείου</div>
-  <div class="footer-copy">© 2024 @petrosch</div>
+  <div class="footer-copy">© 2024 @petrosch — Όλα τα δικαιώματα διατηρούνται</div>
   <div class="footer-yt"><a href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">▶ YouTube</a></div>
 </footer>
 
