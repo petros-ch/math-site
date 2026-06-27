@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ΜΑΘΗΜΑΤΙΚΑ</title>
+  <meta name="description" content="Ασκήσεις μαθηματικών Γ Λυκείου Προσανατολισμού & ΕΠΑ.Λ. από τον @petrosch">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .hero-math-row {
+      display: flex; gap: 20px; flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 48px;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 26px;
+      text-align: center;
+      min-width: 110px;
+    }
+    .hero-stat-num {
+      font-family: var(--ff-display);
+      font-size: 1.8rem;
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .hero-stat-lbl {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: 4px;
+    }
+    .feature-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    .feature-item {
+      border-left: 2px solid var(--gold);
+      padding: 14px 20px;
+      background: rgba(245,200,67,0.04);
+    }
+    .feature-item h3 { font-family: var(--ff-display); font-size: 1rem; color: var(--white); margin-bottom: 6px; }
+    .feature-item p  { font-size: 0.85rem; color: var(--muted); }
+    .yt-banner {
+      background: linear-gradient(135deg, #1a0a0a 0%, #0d0b1a 100%);
+      border: 1px solid rgba(255,60,60,0.2);
+      border-radius: 12px;
+      padding: clamp(28px,4vw,48px);
+      display: flex; flex-wrap: wrap; gap: 24px;
+      align-items: center; justify-content: space-between;
+    }
+    .yt-banner-text h2 { font-family: var(--ff-display); font-size: clamp(1.2rem,2.5vw,1.8rem); color: var(--white); margin-bottom: 8px; }
+    .yt-banner-text p  { color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+<canvas id="star-bg"></canvas>
+<div class="math-float"></div>
+
+<nav>
+  <a class="nav-logo" href="index.html">ΜΑΘΗΜΑΤΙΚΑ</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Αρχική</a></li>
+    <li class="nav-dropdown">
+      <a href="#" class="nav-dropdown-toggle">Τάξη ▾</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="pages/prosanatolismos.html">Γ΄ ΓΕΛ Προσανατολισμός</a></li>
+        <li><a href="pages/epal.html">Γ΄ ΕΠΑΛ</a></li>
+        <li><a href="pages/videos.html">Β΄ Λυκείου Άλγεβρα</a></li>
+      </ul>
+    </li>
+    <li><a href="pages/videos.html">Βίντεο</a></li>
+    <li><a href="pages/epal.html">ΕΠΑ.Λ.</a></li>
+    <li><a href="pages/about.html">Σχετικά</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Μενού">☰</button>
+</nav>
+
+<main class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <p class="hero-eyebrow">youtube.com/@petrosch</p>
+    <h1 class="hero-title">ΜΑΘΗ<em>ΜΑΤΙΚΑ</em></h1>
+    <p class="hero-sub">Ασκήσεις Μαθηματικών</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="pages/videos.html">▶ Δες τα Βίντεο</a>
+      <a class="btn btn-ghost" href="pages/topics.html">Θεματολογία →</a>
+    </div>
+    <div class="hero-math-row">
+      <div class="hero-stat"><div class="hero-stat-num">3</div><div class="hero-stat-lbl">Κεφάλαια</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">∞</div><div class="hero-stat-lbl">Ασκήσεις</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">2</div><div class="hero-stat-lbl">Κατευθύνσεις</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">0€</div><div class="hero-stat-lbl">Κόστος</div></div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- FEATURES -->
+  <section>
+    <p class="section-label reveal">Τι θα βρεις εδώ</p>
+    <h2 class="section-title reveal">Μαθηματικά χωρίς κενά</h2>
+    <p class="section-desc reveal">Κάθε βίντεο εστιάζει σε μία άσκηση, εξηγώντας κάθε βήμα με σαφήνεια.</p>
+    <div class="feature-row">
+      <div class="feature-item reveal">
+        <h3>Προσανατολισμός</h3>
+        <p>Όρια, παράγωγοι, ολοκληρώματα, συνέχεια — πλήρης κάλυψη ύλης Γ΄ Λυκείου.</p>
+      </div>
+      <div class="feature-item reveal">
+        <h3>ΕΠΑ.Λ.</h3>
+        <p>Ξεχωριστή σελίδα για την ύλη ΕΠΑ.Λ. με στοχευμένες ασκήσεις.</p>
+      </div>
+      <div class="feature-item reveal">
+        <h3>Βήμα–Βήμα</h3>
+        <p>Αναλυτική παρουσίαση κάθε άσκησης χωρίς παραλείψεις.</p>
+      </div>
+      <div class="feature-item reveal">
+        <h3>Δωρεάν</h3>
+        <p>Όλο το υλικό δωρεάν στο YouTube — δεν χρειάζεται εγγραφή ούτε συνδρομή.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ΤΆΞΕΙΣ -->
+  <section>
+    <p class="section-label reveal">Επίλεξε Τάξη</p>
+    <h2 class="section-title reveal">Βρες τα βίντεο σου</h2>
+    <p class="section-desc reveal">Επίλεξε την τάξη σου για να δεις το αντίστοιχο υλικό.</p>
+    <div class="card-grid">
+      <a href="pages/prosanatolismos.html" class="card reveal" style="text-decoration:none;display:block;">
+        <div class="card-icon">📐</div>
+        <div class="card-title">Γ΄ ΓΕΛ Προσανατολισμός</div>
+        <p class="card-desc">Όρια, παράγωγοι, ολοκληρώματα — πλήρης κάλυψη ύλης Μαθηματικών Προσανατολισμού.</p>
+      </a>
+      <a href="pages/epal.html" class="card reveal" style="text-decoration:none;display:block;">
+        <div class="card-icon">🔧</div>
+        <div class="card-title">Γ΄ ΕΠΑΛ</div>
+        <p class="card-desc">Στοχευμένες ασκήσεις για την ύλη των Επαγγελματικών Λυκείων.</p>
+      </a>
+      <a href="pages/videos.html" class="card reveal" style="text-decoration:none;display:block;">
+        <div class="card-icon">📘</div>
+        <div class="card-title">Β΄ Λυκείου Άλγεβρα</div>
+        <p class="card-desc">Ασκήσεις Άλγεβρας Β΄ Λυκείου — εξισώσεις, ανισώσεις, συστήματα και συναρτήσεις.</p>
+      </a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- YT BANNER -->
+  <section>
+    <div class="yt-banner reveal">
+      <div class="yt-banner-text">
+        <h2>📺 Παρακολούθησε στο YouTube</h2>
+        <p>Όλα τα βίντεο στο κανάλι <strong>@petrosch</strong> — ασκήσεις Προσανατολισμού & ΕΠΑ.Λ.</p>
+      </div>
+      <a class="btn btn-gold" href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">
+        Πήγαινε στο Κανάλι ↗
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-logo">ΜΑΘΗΜΑΤΙΚΑ · Γ΄ Λυκείου</div>
+  <div class="footer-copy">© 2024 @petrosch — Όλα τα δικαιώματα διατηρούνται</div>
+  <div class="footer-yt"><a href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">▶ YouTube</a></div>
+</footer>
+
+<script src="js/shared.js"></script>
+</body>
+</html>

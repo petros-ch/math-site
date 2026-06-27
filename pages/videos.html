@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Βίντεο — Μαθηματικά Γ΄ Λυκείου</title>
+  <meta name="description" content="Βίντεο ασκήσεων Μαθηματικών Γ Λυκείου Προσανατολισμού">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .filter-bar {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .filter-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all .18s;
+      font-family: var(--ff-body);
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: rgba(245,200,67,0.12);
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .playlist-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,0,0,0.1);
+      border: 1px solid rgba(255,60,60,0.25);
+      color: #ff7070;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      margin-bottom: 40px;
+      transition: background .2s;
+    }
+    .playlist-link:hover { background: rgba(255,0,0,0.2); }
+    .video-section { margin-bottom: 56px; }
+    .video-section-title {
+      font-family: var(--ff-display);
+      font-size: 1.1rem;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      margin-bottom: 18px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .video-section-title::after {
+      content: ''; flex: 1;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+<canvas id="star-bg"></canvas>
+<div class="math-float"></div>
+
+<nav>
+  <a class="nav-logo" href="../index.html">ΜΑΘΗΜΑΤΙΚΑ <span>Γ΄ Λυκείου</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Αρχική</a></li>
+    <li class="nav-dropdown">
+      <a href="#" class="nav-dropdown-toggle">Τάξη ▾</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="prosanatolismos.html">Γ΄ ΓΕΛ Προσανατολισμός</a></li>
+        <li><a href="epal.html">Γ΄ ΕΠΑΛ</a></li>
+        <li><a href="videos.html">Β΄ Λυκείου Άλγεβρα</a></li>
+      </ul>
+    </li>
+    <li><a href="videos.html">Βίντεο</a></li>
+    <li><a href="epal.html">ΕΠΑ.Λ.</a></li>
+    <li><a href="about.html">Σχετικά</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Μενού">☰</button>
+</nav>
+
+<main class="page">
+  <section>
+    <p class="section-label reveal">@petrosch</p>
+    <h1 class="section-title reveal">Βίντεο Ασκήσεων</h1>
+    <p class="section-desc reveal">Επιλεγμένα βίντεο από το κανάλι — Προσανατολισμός Γ΄ Λυκείου.</p>
+
+    <a class="playlist-link reveal" href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">
+      ▶ Δες όλα τα βίντεο στο YouTube ↗
+    </a>
+
+    <!-- Όρια -->
+    <div class="video-section reveal">
+      <div class="video-section-title">Κεφ. 1 — Όρια & Συνέχεια</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb">
+            <iframe src="https://www.youtube.com/embed/9wQE9yeCcbw" loading="lazy"
+              title="Πραγματικοί Αριθμοί" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-title">Πραγματικοί Αριθμοί — §1.1</div>
+            <div class="video-meta">Κεφ. 1 · Προσανατολισμός</div>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-thumb">
+            <iframe src="https://www.youtube.com/embed/0FQPejiUwf8" loading="lazy"
+              title="Ασύμπτωτες & De L'Hôpital" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-title">Ασύμπτωτες — Κανόνες De L'Hôpital (μέρος 2)</div>
+            <div class="video-meta">Κεφ. 1 · §1.5</div>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-thumb">
+            <iframe src="https://www.youtube.com/embed/sWYIwfdR07U" loading="lazy"
+              title="Περιγραφή Μαθήματος" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-title">Περιγραφή Μαθήματος Γ΄ Λυκείου</div>
+            <div class="video-meta">Εισαγωγή · Γενική Επισκόπηση</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Επαναληπτικά -->
+    <div class="video-section reveal">
+      <div class="video-section-title">Επαναληπτικές Ασκήσεις</div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb">
+            <iframe src="https://www.youtube.com/embed/_owiTk6wY3U" loading="lazy"
+              title="Επαναληπτικές Ασκήσεις 1" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-title">Επαναληπτικές Ασκήσεις (1)</div>
+            <div class="video-meta">Μάιος 2019</div>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-thumb">
+            <iframe src="https://www.youtube.com/embed/7clb-tJ2x4o" loading="lazy"
+              title="Επαναληπτικό Διαγώνισμα" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-title">Επαναληπτικό Διαγώνισμα Κατεύθυνσης</div>
+            <div class="video-meta">Πανελλαδικές · Προετοιμασία</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Πλήρες αρχείο -->
+    <div class="reveal" style="text-align:center; padding: 40px 0;">
+      <p style="color:var(--muted); margin-bottom:20px;">Δες ολόκληρο το αρχείο βίντεο στο YouTube</p>
+      <a class="btn btn-gold" href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">
+        ▶ Άνοιξε το Κανάλι
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-logo">ΜΑΘΗΜΑΤΙΚΑ · Γ΄ Λυκείου</div>
+  <div class="footer-copy">© 2024 @petrosch</div>
+  <div class="footer-yt"><a href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">▶ YouTube</a></div>
+</footer>
+
+<script src="../js/shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ΕΠΑ.Λ. — Μαθηματικά Γ΄ Λυκείου</title>
+  <meta name="description" content="Μαθηματικά Γ΄ ΕΠΑ.Λ. — Ασκήσεις και θεωρία">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .epal-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(180,138,255,0.2), rgba(245,200,67,0.1));
+      border: 1px solid rgba(180,138,255,0.4);
+      color: var(--violet);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      font-family: var(--ff-mono);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    .diff-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 32px;
+      font-size: 0.88rem;
+    }
+    .diff-table th {
+      background: var(--surface);
+      color: var(--gold);
+      font-family: var(--ff-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .diff-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      vertical-align: top;
+    }
+    .diff-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .diff-table td:first-child { color: var(--white); font-weight: 500; }
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-family: var(--ff-mono);
+    }
+    .tag-yes { background: rgba(100,200,100,0.12); color: #80cc80; }
+    .tag-no  { background: rgba(200,100,100,0.12); color: #cc8080; }
+    .tag-diff{ background: rgba(245,200,67,0.12);  color: var(--gold); }
+  </style>
+</head>
+<body>
+<canvas id="star-bg"></canvas>
+<div class="math-float"></div>
+
+<nav>
+  <a class="nav-logo" href="../index.html">ΜΑΘΗΜΑΤΙΚΑ <span>Γ΄ Λυκείου</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Αρχική</a></li>
+    <li class="nav-dropdown">
+      <a href="#" class="nav-dropdown-toggle">Τάξη ▾</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="prosanatolismos.html">Γ΄ ΓΕΛ Προσανατολισμός</a></li>
+        <li><a href="epal.html">Γ΄ ΕΠΑΛ</a></li>
+        <li><a href="videos.html">Β΄ Λυκείου Άλγεβρα</a></li>
+      </ul>
+    </li>
+    <li><a href="videos.html">Βίντεο</a></li>
+    <li><a href="epal.html">ΕΠΑ.Λ.</a></li>
+    <li><a href="about.html">Σχετικά</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Μενού">☰</button>
+</nav>
+
+<main class="page">
+  <section>
+    <div class="epal-badge reveal">Γ΄ ΕΠΑ.Λ.</div>
+    <h1 class="section-title reveal">Μαθηματικά ΕΠΑ.Λ.</h1>
+    <p class="section-desc reveal">Ασκήσεις και θεωρία για τη Γ΄ τάξη Επαγγελματικού Λυκείου — στοχευμένη προετοιμασία για τις εξετάσεις.</p>
+
+    <!-- Video EPAL -->
+    <div class="video-grid reveal" style="margin-bottom: 56px;">
+      <div class="video-card">
+        <div class="video-thumb">
+          <iframe src="https://www.youtube.com/embed/J6_XNI9tHus" loading="lazy"
+            title="Βασικές γνώσεις ΕΠΑ.Λ." allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <div class="video-title">Βασικές Γνώσεις Μαθηματικών Γ΄ ΕΠΑ.Λ.</div>
+          <div class="video-meta">ΕΠΑ.Λ. · Εισαγωγή</div>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb">
+          <iframe src="https://www.youtube.com/embed/PE3539SlJmY" loading="lazy"
+            title="Αποδείξεις 2ου κεφαλαίου ΕΠΑ.Λ." allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <div class="video-title">Αποδείξεις 2ου Κεφαλαίου ΕΠΑ.Λ.</div>
+          <div class="video-meta">ΕΠΑ.Λ. · Κεφ. 2 · Απρίλιος 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin: 0 0 48px 0;">
+
+    <!-- Σύγκριση -->
+    <p class="section-label reveal">Σύγκριση Ύλης</p>
+    <h2 class="section-title reveal">Προσανατολισμός vs ΕΠΑ.Λ.</h2>
+    <p class="section-desc reveal">Ποια κεφάλαια είναι κοινά και που διαφέρουν οι δύο κατευθύνσεις.</p>
+
+    <table class="diff-table reveal">
+      <thead>
+        <tr>
+          <th>Ενότητα</th>
+          <th>Προσανατολισμός</th>
+          <th>ΕΠΑ.Λ.</th>
+          <th>Σημείωση</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Πραγματικοί Αριθμοί</td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td>Κοινή βάση</td>
+        </tr>
+        <tr>
+          <td>Όρια Συναρτήσεων</td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td>Λιγότερη βαθύτητα στο ΕΠΑ.Λ.</td>
+        </tr>
+        <tr>
+          <td>Κανόνας De L'Hôpital</td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td><span class="tag tag-no">✗ Όχι</span></td>
+          <td>Μόνο Προσανατολισμός</td>
+        </tr>
+        <tr>
+          <td>Παράγωγος — Ορισμός</td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td>Κοινό</td>
+        </tr>
+        <tr>
+          <td>Μελέτη Συνάρτησης</td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td><span class="tag tag-diff">~ Μερικώς</span></td>
+          <td>Χωρίς κυρτότητα στο ΕΠΑ.Λ.</td>
+        </tr>
+        <tr>
+          <td>Αόριστο Ολοκλήρωμα</td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td>Κοινό</td>
+        </tr>
+        <tr>
+          <td>Ολοκλήρωση κατά μέρη</td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td><span class="tag tag-no">✗ Όχι</span></td>
+          <td>Μόνο Προσανατολισμός</td>
+        </tr>
+        <tr>
+          <td>Εμβαδόν χωρίων</td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td><span class="tag tag-yes">✓ Ναι</span></td>
+          <td>Κοινό</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="text-align:center; padding: 48px 0 20px;">
+      <a class="btn btn-gold" href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">▶ Βίντεο ΕΠΑ.Λ. στο YouTube</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-logo">ΜΑΘΗΜΑΤΙΚΑ · Γ΄ Λυκείου</div>
+  <div class="footer-copy">© 2024 @petrosch</div>
+  <div class="footer-yt"><a href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">▶ YouTube</a></div>
+</footer>
+
+<script src="../js/shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Γ΄ Λυκείου Προσανατολισμός — ΜΑΘΗΜΑΤΙΚΑ</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .pros-content {
+            position: relative; z-index: 1;
+            padding-top: 62px;
+        }
+        .pros-header {
+            padding: clamp(40px,6vw,80px) clamp(16px,4vw,48px) 0;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .pros-header h1 {
+            font-family: var(--ff-display);
+            font-size: clamp(28px,4vw,48px);
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+        .pros-header p { color: var(--muted); font-size: 0.9rem; }
+        .pros-main {
+            max-width: 1100px;
+            margin: 32px auto 0;
+            padding: 0 clamp(16px,4vw,48px) 80px;
+        }
+        .pros-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: border-color .2s;
+        }
+        .pros-section:hover { border-color: rgba(245,200,67,0.25); }
+        .pros-section-title {
+            font-family: var(--ff-display);
+            font-size: 1.05rem;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+        .pros-playlist-info {
+            font-size: 0.78rem;
+            color: var(--muted);
+            font-family: var(--ff-mono);
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+        }
+        .pros-video {
+            border-left: 3px solid rgba(245,200,67,0.4);
+            padding: 12px 16px;
+            margin: 8px 0;
+            background: rgba(255,255,255,0.02);
+            border-radius: 0 6px 6px 0;
+        }
+        .pros-video h2 {
+            font-size: 0.9rem;
+            color: var(--white);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .pros-video a {
+            color: var(--violet);
+            font-size: 0.82rem;
+            font-family: var(--ff-mono);
+            transition: color .15s;
+            word-break: break-all;
+        }
+        .pros-video a:hover { color: var(--gold); }
+        .pros-divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 12px 0;
+        }
+        .pros-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--ff-mono);
+            font-size: 0.75rem;
+            color: var(--muted);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 4px 12px;
+            margin-right: 8px;
+        }
+        .pros-stat span { color: var(--gold); font-weight: 700; }
+    </style>
+</head>
+<body>
+<canvas id="star-bg"></canvas>
+<div class="math-float"></div>
+
+<nav>
+  <a class="nav-logo" href="../index.html">ΜΑΘΗΜΑΤΙΚΑ</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Αρχική</a></li>
+    <li class="nav-dropdown">
+      <a href="#" class="nav-dropdown-toggle">Τάξη ▾</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="prosanatolismos.html" class="active">Γ΄ ΓΕΛ Προσανατολισμός</a></li>
+        <li><a href="epal.html">Γ΄ ΕΠΑΛ</a></li>
+        <li><a href="videos.html">Β΄ Λυκείου Άλγεβρα</a></li>
+      </ul>
+    </li>
+    <li><a href="videos.html">Βίντεο</a></li>
+    <li><a href="epal.html">ΕΠΑ.Λ.</a></li>
+    <li><a href="about.html">Σχετικά</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Μενού">☰</button>
+</nav>
+
+<div class="pros-content">
+  <div class="pros-header">
+    <p class="section-label">Τάξη · Γ΄ ΓΕΛ</p>
+    <h1 style="font-family:var(--ff-display);font-size:clamp(28px,4vw,48px);color:var(--white);margin-bottom:8px;">Μαθηματικά <em style="font-style:normal;color:var(--gold)">Προσανατολισμού</em></h1>
+    <p>Όλα τα βίντεο του καναλιού @petrosch για τα Μαθηματικά Προσανατολισμού Γ΄ Λυκείου</p>
+    <div style="margin-top:16px;">
+      <span class="pros-stat"><span>108</span> βίντεο</span>
+      <span class="pros-stat"><span>24</span> playlists</span>
+    </div>
+  </div>
+  <div class="pros-main">
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.02 Συναρτήσεις (Α.Πεδίο ορισμού)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 7
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Πεδίο ορισμού &amp; Σύνολο Τιμών - Άσκηση 05 (Γραφική Παράσταση)</p>
+            <div><a href="https://www.youtube.com/watch?v=uUFkVZSQ6YA" target="_blank">https://www.youtube.com/watch?v=uUFkVZSQ6YA</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Πεδίο ορισμού - Άσκηση 01 (Κλάσμα)</p>
+            <div><a href="https://www.youtube.com/watch?v=8c-oGzQvkpA" target="_blank">https://www.youtube.com/watch?v=8c-oGzQvkpA</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Πεδίο ορισμού - Άσκηση 02 (Ρίζα)</p>
+            <div><a href="https://www.youtube.com/watch?v=1lYMzPTNW2M" target="_blank">https://www.youtube.com/watch?v=1lYMzPTNW2M</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Πεδίο ορισμού - Άσκηση 03 (Κλάσμα - Λογάριθμος)</p>
+            <div><a href="https://www.youtube.com/watch?v=Fu_M1Bz9TSU" target="_blank">https://www.youtube.com/watch?v=Fu_M1Bz9TSU</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Πεδίο ορισμού - Άσκηση 04</p>
+            <div><a href="https://www.youtube.com/watch?v=ZknS3Ngdilo" target="_blank">https://www.youtube.com/watch?v=ZknS3Ngdilo</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Πεδίο ορισμού - Άσκηση 06</p>
+            <div><a href="https://www.youtube.com/watch?v=DNp1nV_ptsg" target="_blank">https://www.youtube.com/watch?v=DNp1nV_ptsg</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Πεδίο ορισμού - Άσκηση 07 (Συνάρτηση με κλάδους)</p>
+            <div><a href="https://www.youtube.com/watch?v=tqbwzRiMfRs" target="_blank">https://www.youtube.com/watch?v=tqbwzRiMfRs</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.02 Συναρτήσεις (Β.Τιμή της f - Σημεία τομής με άξονες - Σχετική θέση)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 7
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Σημεία τομής με άξονες &amp; Σχετική θέση με x'x - Άσκηση 01 (Δίκλαδη)</p>
+            <div><a href="https://www.youtube.com/watch?v=Trs8v2wmp5o" target="_blank">https://www.youtube.com/watch?v=Trs8v2wmp5o</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Σημεία τομής με άξονες - Άσκηση 01 (με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=4uOemFJGDXk" target="_blank">https://www.youtube.com/watch?v=4uOemFJGDXk</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Σχετική θέση συνάρτησης με τον x'x - Άσκηση 01 (με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=KnZhvebPgmk" target="_blank">https://www.youtube.com/watch?v=KnZhvebPgmk</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Τιμές της f  - Άσκηση 03 (χωρίς τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=CNOpepDarzU" target="_blank">https://www.youtube.com/watch?v=CNOpepDarzU</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Τιμές της f - Άσκηση 02 (Δίκλαδη συνάρτηση)</p>
+            <div><a href="https://www.youtube.com/watch?v=lk9-ONd8Sn0" target="_blank">https://www.youtube.com/watch?v=lk9-ONd8Sn0</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Τιμές της f - Άσκηση 04 (χωρίς τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=PtXU_Ou5bQM" target="_blank">https://www.youtube.com/watch?v=PtXU_Ou5bQM</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Τιμή της f - Άσκηση 01 (με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=Nage0akfejs" target="_blank">https://www.youtube.com/watch?v=Nage0akfejs</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.02 Συναρτήσεις (Γ.Ισότητα συναρτήσεων)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 1
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Ισότητα συναρτήσεων - Άσκηση 03</p>
+            <div><a href="https://www.youtube.com/watch?v=zIh-O5GFxX0" target="_blank">https://www.youtube.com/watch?v=zIh-O5GFxX0</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.02 Συναρτήσεις (Δ.Πράξεις συναρτήσεων)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 1
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Πράξεις συναρτήσεων - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=vQxT9S0nmRA" target="_blank">https://www.youtube.com/watch?v=vQxT9S0nmRA</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.02 Συναρτήσεις (Ε.Σύνθεση συναρτήσεων)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 7
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Εύρεση εξωτερικής συνάρτησης σε σύνθεση - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=aAs3M2Qne_M" target="_blank">https://www.youtube.com/watch?v=aAs3M2Qne_M</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Εύρεση εσωτερικής συνάρτησης σε σύνθεση - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=PIOZ9AXybBw" target="_blank">https://www.youtube.com/watch?v=PIOZ9AXybBw</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Εύρεση εσωτερικής συνάρτησης σε σύνθεση - Άσκηση 02</p>
+            <div><a href="https://www.youtube.com/watch?v=kvbUyZsptL4" target="_blank">https://www.youtube.com/watch?v=kvbUyZsptL4</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Πεδίο ορισμού σύνθεσης - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=mm7Fj2NnI20" target="_blank">https://www.youtube.com/watch?v=mm7Fj2NnI20</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Σύνθεση συναρτήσεων - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=s5rBuBqidUk" target="_blank">https://www.youtube.com/watch?v=s5rBuBqidUk</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Σύνθεση συναρτήσεων - Άσκηση 02</p>
+            <div><a href="https://www.youtube.com/watch?v=HfhVOiAo-8k" target="_blank">https://www.youtube.com/watch?v=HfhVOiAo-8k</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.02 Συναρτήσεις - Σύνθεση συναρτήσεων - Άσκηση 03</p>
+            <div><a href="https://www.youtube.com/watch?v=xXixrOTgavg" target="_blank">https://www.youtube.com/watch?v=xXixrOTgavg</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.03Α Μονότονες Συναρτήσεις</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 4
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.03Α Μονοτονία Ακρότατα - Άσκηση 01 - (Από γραφική παράσταση)</p>
+            <div><a href="https://www.youtube.com/watch?v=LMIMbyd5QBw" target="_blank">https://www.youtube.com/watch?v=LMIMbyd5QBw</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.03Α Μονοτονία-Ακρότατα - Άσκηση 02 (Με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=A2iz8cZC5Mw" target="_blank">https://www.youtube.com/watch?v=A2iz8cZC5Mw</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.03Α Μονοτονία-Ακρότατα - Άσκηση 03 (Δίκλαδη συνάρτηση)</p>
+            <div><a href="https://www.youtube.com/watch?v=jOkvdU8DGT8" target="_blank">https://www.youtube.com/watch?v=jOkvdU8DGT8</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.03Α Μονοτονία-Ακρότατα - Άσκηση 04 (με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=JMqwHDJ8x-4" target="_blank">https://www.youtube.com/watch?v=JMqwHDJ8x-4</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.03Β Αντίστροφη Συνάρτηση</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 7
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.03 Μονότονες-Αντίστροφες συναρτήσεις - 1-1 - Άσκηση 01 (Γραφικά)</p>
+            <div><a href="https://www.youtube.com/watch?v=JN8gjPsGGfo" target="_blank">https://www.youtube.com/watch?v=JN8gjPsGGfo</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.03 Μονότονες-Αντίστροφες συναρτήσεις - 1-1 - Άσκηση 02 (Με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=xpFIeFs69p8" target="_blank">https://www.youtube.com/watch?v=xpFIeFs69p8</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.03 Μονότονες-Αντίστροφες συναρτήσεις - 1-1 - Άσκηση 03 (Με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=luQ8sqhxy4o" target="_blank">https://www.youtube.com/watch?v=luQ8sqhxy4o</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.03 Μονότονες-Αντίστροφες συναρτήσεις - 1-1 - Άσκηση 04 (Συναρτησιακή Σχέση)</p>
+            <div><a href="https://www.youtube.com/watch?v=K8Hz9vidlB0" target="_blank">https://www.youtube.com/watch?v=K8Hz9vidlB0</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.03 Μονότονες-Αντίστροφες συναρτήσεις - 1-1 - Άσκηση 05 (Λύση εξίσωσης)</p>
+            <div><a href="https://www.youtube.com/watch?v=ipZLl9kxI9w" target="_blank">https://www.youtube.com/watch?v=ipZLl9kxI9w</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.03 Μονότονες-Αντίστροφες συναρτήσεις - 1-1 - Άσκηση 06 (Λύση εξίσωσης χωρίς συνάρτηση)</p>
+            <div><a href="https://www.youtube.com/watch?v=nsc-Z7giX4Q" target="_blank">https://www.youtube.com/watch?v=nsc-Z7giX4Q</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.03 Μονότονες-Αντίστροφες συναρτήσεις - 1-1 - Άσκηση 07 (Με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=yb-CqhtAcX8" target="_blank">https://www.youtube.com/watch?v=yb-CqhtAcX8</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.04 Όριο συνάρτησης στο x0 ϵ R</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 4
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.04 Όριο συνάρτησης στο x0 - Άσκηση 01 (Γραφικά)</p>
+            <div><a href="https://www.youtube.com/watch?v=PjbInSGvDyQ" target="_blank">https://www.youtube.com/watch?v=PjbInSGvDyQ</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.04 Όριο συνάρτησης στο x0 - Άσκηση 02 (Γραφικά)</p>
+            <div><a href="https://www.youtube.com/watch?v=qmX4-A5zvzw" target="_blank">https://www.youtube.com/watch?v=qmX4-A5zvzw</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.04 Όριο συνάρτησης στο x0 - Άσκηση 03 (Γραφικά)</p>
+            <div><a href="https://www.youtube.com/watch?v=aHarOgboXoA" target="_blank">https://www.youtube.com/watch?v=aHarOgboXoA</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.04 Όριο συνάρτησης στο x0 - Άσκηση 04 (Ύπαρξη ορίου)</p>
+            <div><a href="https://www.youtube.com/watch?v=t-sDsW8EhAg" target="_blank">https://www.youtube.com/watch?v=t-sDsW8EhAg</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.05 Ιδιότητες των ορίων</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 8
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.05 Ιδιότητες ορίων (Α) - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=Vai3RmKqj3M" target="_blank">https://www.youtube.com/watch?v=Vai3RmKqj3M</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.05 Ιδιότητες ορίων (Β) - Άσκηση 01 (Ρητή και Ρητή 0/0)</p>
+            <div><a href="https://www.youtube.com/watch?v=gVIfUqlV4HQ" target="_blank">https://www.youtube.com/watch?v=gVIfUqlV4HQ</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.05 Ιδιότητες ορίων (Γ) - Άσκηση 01 (Με ρίζα 0/0)</p>
+            <div><a href="https://www.youtube.com/watch?v=IzCcfiwT0T4" target="_blank">https://www.youtube.com/watch?v=IzCcfiwT0T4</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.05 Ιδιότητες ορίων (Γ) - Άσκηση 02 (Με ρίζα 0/0)</p>
+            <div><a href="https://www.youtube.com/watch?v=B-m7ogv2sow" target="_blank">https://www.youtube.com/watch?v=B-m7ogv2sow</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.05 Ιδιότητες ορίων (Δ) -  Άσκηση 03 (Τριγωνομετρικό)</p>
+            <div><a href="https://www.youtube.com/watch?v=n1rIiLdfKl4" target="_blank">https://www.youtube.com/watch?v=n1rIiLdfKl4</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.05 Ιδιότητες ορίων (Δ) -  Άσκηση 04 (Τριγωνομετρικά)</p>
+            <div><a href="https://www.youtube.com/watch?v=GboM1vv37Wk" target="_blank">https://www.youtube.com/watch?v=GboM1vv37Wk</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.05 Ιδιότητες ορίων (Δ) - Άσκηση 01 (Τριγωνομετρικό 0/0)</p>
+            <div><a href="https://www.youtube.com/watch?v=mQZMuhO95rA" target="_blank">https://www.youtube.com/watch?v=mQZMuhO95rA</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.05 Ιδιότητες ορίων (Δ) - Άσκηση 02 (Τριγωνομετρικό 0/0)</p>
+            <div><a href="https://www.youtube.com/watch?v=at-OH3Eu4Zc" target="_blank">https://www.youtube.com/watch?v=at-OH3Eu4Zc</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.06 Μη πεπερασμένο όριο στο x0 ϵ R</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 4
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.06 Μη πεπερασμένο όριο στο x0 - Άσκηση 01 (απλή 1)</p>
+            <div><a href="https://www.youtube.com/watch?v=mqUV_PRasik" target="_blank">https://www.youtube.com/watch?v=mqUV_PRasik</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.06 Μη πεπερασμένο όριο στο x0 - Άσκηση 02 (απλή 2)</p>
+            <div><a href="https://www.youtube.com/watch?v=-EDKbjFxXls" target="_blank">https://www.youtube.com/watch?v=-EDKbjFxXls</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.06 Μη πεπερασμένο όριο στο x0 - Άσκηση 03 (Παραμετρικό Όριο 1)</p>
+            <div><a href="https://www.youtube.com/watch?v=iWNGdxtcV_8" target="_blank">https://www.youtube.com/watch?v=iWNGdxtcV_8</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.06 Μη πεπερασμένο όριο στο x0 - Άσκηση 04 (Παραμετρικό Όριο 2)</p>
+            <div><a href="https://www.youtube.com/watch?v=26zi8SHGxKQ" target="_blank">https://www.youtube.com/watch?v=26zi8SHGxKQ</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.07 Όριο συνάρτησης στο άπειρο</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 5
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.07 Όριο στο άπειρο -  Άσκηση 05 (Μηδενική επί φραγμένη)</p>
+            <div><a href="https://www.youtube.com/watch?v=PUu-KDDGWEQ" target="_blank">https://www.youtube.com/watch?v=PUu-KDDGWEQ</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.07 Όριο στο άπειρο - Άσκηση 01 (Πολυώνυμα)</p>
+            <div><a href="https://www.youtube.com/watch?v=hxtuUDOmx7Y" target="_blank">https://www.youtube.com/watch?v=hxtuUDOmx7Y</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.07 Όριο στο άπειρο - Άσκηση 02 (Ρητές)</p>
+            <div><a href="https://www.youtube.com/watch?v=Q8qKHXFj-CU" target="_blank">https://www.youtube.com/watch?v=Q8qKHXFj-CU</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.07 Όριο στο άπειρο - Άσκηση 03 (Άρρητη χωρίς συζυγή)</p>
+            <div><a href="https://www.youtube.com/watch?v=6lS1DylQCxk" target="_blank">https://www.youtube.com/watch?v=6lS1DylQCxk</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.07 Όριο στο άπειρο - Άσκηση 04 (Με απόλυτα)</p>
+            <div><a href="https://www.youtube.com/watch?v=On6Y5jw7M6g" target="_blank">https://www.youtube.com/watch?v=On6Y5jw7M6g</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.08 Συνέχεια  Συνάρτησης (Γ.Σύνολο Τιμών)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 3
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title"></p>
+            <div><a href="https://www.youtube.com/watch?v=Q5HdtWRuRAA" target="_blank">https://www.youtube.com/watch?v=Q5HdtWRuRAA</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια  Συνάρτησης (Γ.Σύνολο Τιμών) - Άσκηση 01 (Σύνολο Τιμών)</p>
+            <div><a href="https://www.youtube.com/watch?v=zwOK498zKkM" target="_blank">https://www.youtube.com/watch?v=zwOK498zKkM</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια  Συνάρτησης (Γ.Σύνολο Τιμών) - Άσκηση 02 (Σύνολο Τιμών)</p>
+            <div><a href="https://www.youtube.com/watch?v=DQOEZ-nHMfI" target="_blank">https://www.youtube.com/watch?v=DQOEZ-nHMfI</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.08 Συνέχεια συνάρτησης (Α.Συνέχεια)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 6
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια συνάρτησης (Α.Συνέχεια) - Άσκηση 01 (Γραφικά)</p>
+            <div><a href="https://www.youtube.com/watch?v=GT-fjfwnR5g" target="_blank">https://www.youtube.com/watch?v=GT-fjfwnR5g</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια συνάρτησης (Α.Συνέχεια) - Άσκηση 02 (Με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=WwPPheW90TM" target="_blank">https://www.youtube.com/watch?v=WwPPheW90TM</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια συνάρτησης (Α.Συνέχεια) - Άσκηση 03 (Με πολλαπλό τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=OeSlbK9AV5g" target="_blank">https://www.youtube.com/watch?v=OeSlbK9AV5g</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια συνάρτησης (Α.Συνέχεια) - Άσκηση 04 (Σε διάστημα)</p>
+            <div><a href="https://www.youtube.com/watch?v=CU2mS9zuMq0" target="_blank">https://www.youtube.com/watch?v=CU2mS9zuMq0</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια συνάρτησης (Α.Συνέχεια) - Άσκηση 05 (Εύρεση παραμέτρου ώστε f συνεχής)</p>
+            <div><a href="https://www.youtube.com/watch?v=-01eFL-kAgo" target="_blank">https://www.youtube.com/watch?v=-01eFL-kAgo</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια συνάρτησης (Α.Συνέχεια) - Άσκηση 06 (Εύρεση τιμής f μέσω συνέχειας)</p>
+            <div><a href="https://www.youtube.com/watch?v=TQuFCIflsUQ" target="_blank">https://www.youtube.com/watch?v=TQuFCIflsUQ</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">1.08 Συνέχεια συνάρτησης (Β.Bolzano)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 7
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια  Συνάρτησης (Β.Bolzano) -  Άσκηση 02 (εξίσωση)</p>
+            <div><a href="https://www.youtube.com/watch?v=c6_ygPHcVvE" target="_blank">https://www.youtube.com/watch?v=c6_ygPHcVvE</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια  Συνάρτησης (Β.Bolzano) - Άσκηση 01 (Προϋποθέσεις - εξίσωση)</p>
+            <div><a href="https://www.youtube.com/watch?v=5PARVMk4pWg" target="_blank">https://www.youtube.com/watch?v=5PARVMk4pWg</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια  Συνάρτησης (Β.Bolzano) - Άσκηση 03 (Εξίσωση με παρονομαστές)</p>
+            <div><a href="https://www.youtube.com/watch?v=kStRfsmXvnA" target="_blank">https://www.youtube.com/watch?v=kStRfsmXvnA</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια  Συνάρτησης (Β.Bolzano) - Άσκηση 04 (Εξίσωση με μοναδική λύση)</p>
+            <div><a href="https://www.youtube.com/watch?v=Ty4igwvVH3Y" target="_blank">https://www.youtube.com/watch?v=Ty4igwvVH3Y</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια  Συνάρτησης (Β.Bolzano) - Άσκηση 05 (Κοινό σημείο γραφικών παραστάσεων)</p>
+            <div><a href="https://www.youtube.com/watch?v=leXAbsG7Zpc" target="_blank">https://www.youtube.com/watch?v=leXAbsG7Zpc</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια  Συνάρτησης (Β.Bolzano) - Άσκηση 06 (Τουλάχιστον 2 ρίζες)</p>
+            <div><a href="https://www.youtube.com/watch?v=gKLxG9wPero" target="_blank">https://www.youtube.com/watch?v=gKLxG9wPero</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">1.08 Συνέχεια  Συνάρτησης (Β.Bolzano) - Άσκηση 07 (Ρίζα σε [α, β] )</p>
+            <div><a href="https://www.youtube.com/watch?v=kXviK489qpU" target="_blank">https://www.youtube.com/watch?v=kXviK489qpU</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">2.02 Παράγωγος συνάρτηση</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 2
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.02 Παράγωγος συνάρτηση - Άσκηση 01 (Πρόβλημα φυσικής)</p>
+            <div><a href="https://www.youtube.com/watch?v=erZMzzWPmoU" target="_blank">https://www.youtube.com/watch?v=erZMzzWPmoU</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.02 Παράγωγος συνάρτηση - Άσκηση 02 (Πρόβλημα φυσικής)</p>
+            <div><a href="https://www.youtube.com/watch?v=MaBQRbZjLZU" target="_blank">https://www.youtube.com/watch?v=MaBQRbZjLZU</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">2.03 Κανόνες παραγώγισης - (Β.Εξίσωση Εφαπτομένης)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 12
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.03 Κανόνες Παραγώγισης (Β.Εξ Εφαπτομένης) - Άσκηση 01 (Με όριο)</p>
+            <div><a href="https://www.youtube.com/watch?v=SbURhRe3Kw0" target="_blank">https://www.youtube.com/watch?v=SbURhRe3Kw0</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.03 Κανόνες Παραγώγισης (Β.Εξ Εφαπτομένης) - Άσκηση 02 (Τύπος - Γνωστό x0)</p>
+            <div><a href="https://www.youtube.com/watch?v=rSTUrQ5Y73o" target="_blank">https://www.youtube.com/watch?v=rSTUrQ5Y73o</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.03 Κανόνες Παραγώγισης (Β.Εξ Εφαπτομένης) - Άσκηση 03 (Τύπος -  Γνωστό λ1)</p>
+            <div><a href="https://www.youtube.com/watch?v=2ngbGVn9ppU" target="_blank">https://www.youtube.com/watch?v=2ngbGVn9ppU</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.03 Κανόνες Παραγώγισης (Β.Εξ Εφαπτομένης) - Άσκηση 04 (Τύπος -  Γνωστό λ2 - κάθετες)</p>
+            <div><a href="https://www.youtube.com/watch?v=PWEantBhN4w" target="_blank">https://www.youtube.com/watch?v=PWEantBhN4w</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.03 Κανόνες Παραγώγισης (Β.Εξ Εφαπτομένης) - Άσκηση 05 (Τύπος -  Γνωστό λ)</p>
+            <div><a href="https://www.youtube.com/watch?v=u9QFm7uyOBY" target="_blank">https://www.youtube.com/watch?v=u9QFm7uyOBY</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.03 Κανόνες Παραγώγισης (Β.Εξ Εφαπτομένης) - Άσκηση 06 (Τύπος - Γνωστή γωνία</p>
+            <div><a href="https://www.youtube.com/watch?v=_KQcAuh-Ej8" target="_blank">https://www.youtube.com/watch?v=_KQcAuh-Ej8</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.03 Κανόνες Παραγώγισης (Β.Εξ Εφαπτομένης) - Άσκηση 07 (Τύπος - Οριζόντια Εφαπτομένη</p>
+            <div><a href="https://www.youtube.com/watch?v=UTP-73vb8WE" target="_blank">https://www.youtube.com/watch?v=UTP-73vb8WE</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.03 Κανόνες Παραγώγισης (Β.Εξ Εφαπτομένης) - Άσκηση 08 (Τύπος - Σημείο εκτός Cf)</p>
+            <div><a href="https://www.youtube.com/watch?v=EdyxpB2r854" target="_blank">https://www.youtube.com/watch?v=EdyxpB2r854</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.03 Κανόνες Παραγώγισης (Β.Εξ Εφαπτομένης) - Άσκηση 09 (Τύπος - Κοινή εφαπτομένη σε κοινό σημείο)</p>
+            <div><a href="https://www.youtube.com/watch?v=1qUIjLv0di8" target="_blank">https://www.youtube.com/watch?v=1qUIjLv0di8</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.03 Κανόνες Παραγώγισης (Β.Εξ Εφαπτομένης) - Άσκηση 10 (Τύπος- Κοινή εφαπτομένη σε ΜΗ κοινό σημείο)</p>
+            <div><a href="https://www.youtube.com/watch?v=hvXeQl-gJqk" target="_blank">https://www.youtube.com/watch?v=hvXeQl-gJqk</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.03 Κανόνες Παραγώγισης (Β.Εξ Εφαπτομένης) - Άσκηση 11 (Τύπος- Κοινή εφαπτομένη σε ΜΗ κοινό σημείο)</p>
+            <div><a href="https://www.youtube.com/watch?v=BtVeLtudZb4" target="_blank">https://www.youtube.com/watch?v=BtVeLtudZb4</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.03 Κανόνες Παραγώγισης (Β.Εξ Εφαπτομένης) - Άσκηση 12 (Τύπος - Σημείο εκτός Cf)</p>
+            <div><a href="https://www.youtube.com/watch?v=VH2x6XbCyLM" target="_blank">https://www.youtube.com/watch?v=VH2x6XbCyLM</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">2.04 Ρυθμός Μεταβολής</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 3
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.04 Ρυθμός μεταβολής - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=3KsqZJ2ZQAw" target="_blank">https://www.youtube.com/watch?v=3KsqZJ2ZQAw</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.04 Ρυθμός μεταβολής - Άσκηση 02</p>
+            <div><a href="https://www.youtube.com/watch?v=-AcFTbxDaFI" target="_blank">https://www.youtube.com/watch?v=-AcFTbxDaFI</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.04 Ρυθμός μεταβολής - Άσκηση 03</p>
+            <div><a href="https://www.youtube.com/watch?v=AMP8hsJTHxQ" target="_blank">https://www.youtube.com/watch?v=AMP8hsJTHxQ</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">2.06 Συνέπειες Θ.Μ.Τ.</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 2
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.06 Συνέπειες Θ.Μ.Τ. - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=-W2Cm8ZaPCk" target="_blank">https://www.youtube.com/watch?v=-W2Cm8ZaPCk</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.06 Συνέπειες Θ.Μ.Τ. - Άσκηση 02</p>
+            <div><a href="https://www.youtube.com/watch?v=q-vdg655-1Q" target="_blank">https://www.youtube.com/watch?v=q-vdg655-1Q</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">2.07 Τοπικά ακρότατα συνάρτησης (Α.Μονοτονία-Ακρότατα)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 1
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.07 Τοπικά ακρότατα - Άσκηση 01 (Μονοτονία ακρότατα με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=VtWLqyxv8Ns" target="_blank">https://www.youtube.com/watch?v=VtWLqyxv8Ns</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">2.07 Τοπικά ακρότατα συνάρτησης (Β.Προβλήματα μεγίστου - ελαχίστου)</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 3
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.07 Β.Προβλήματα μεγίστου ελαχίστου - Άσκηση 02</p>
+            <div><a href="https://www.youtube.com/watch?v=5E9UNUW9mLs" target="_blank">https://www.youtube.com/watch?v=5E9UNUW9mLs</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.07 Β.Προβλήματα μεγίστου ελαχίστου - Άσκηση 03</p>
+            <div><a href="https://www.youtube.com/watch?v=zMiVTM-WSb0" target="_blank">https://www.youtube.com/watch?v=zMiVTM-WSb0</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.07Β Προβλήματα μεγίστου ελαχίστου - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=IL0rYdeM9m0" target="_blank">https://www.youtube.com/watch?v=IL0rYdeM9m0</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">2.09 Ασύπμτωτες - Κανόνες de L' Hospital</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 3
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.09 Ασύμπτωτες - Άσκηση 01 (Με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=cJuTFcLdMSI" target="_blank">https://www.youtube.com/watch?v=cJuTFcLdMSI</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.09 Ασύμπτωτες - Άσκηση 02 (Με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=NwJYeRRtfEI" target="_blank">https://www.youtube.com/watch?v=NwJYeRRtfEI</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.09 Ασύμπτωτες - Άσκηση 03 (Με τύπο)</p>
+            <div><a href="https://www.youtube.com/watch?v=36fIWGPCRWM" target="_blank">https://www.youtube.com/watch?v=36fIWGPCRWM</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">2.10 Μελέτη Συνάρτησης</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 1
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">2.10 Μελέτη συνάρτησης - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=VQTmD_h01oA" target="_blank">https://www.youtube.com/watch?v=VQTmD_h01oA</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">3.04 Ορισμένο ολοκλήρωμα</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 5
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">3.04 Ορισμένο Ολοκλήρωμα (B.Παραγοντική Ολοκλήρωση) - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=1era6x7cieY" target="_blank">https://www.youtube.com/watch?v=1era6x7cieY</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">3.04 Ορισμένο Ολοκλήρωμα (B.Παραγοντική Ολοκλήρωση) - Άσκηση 02</p>
+            <div><a href="https://www.youtube.com/watch?v=9tbLxCTT2UA" target="_blank">https://www.youtube.com/watch?v=9tbLxCTT2UA</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">3.04 Ορισμένο Ολοκλήρωμα (B.Παραγοντική Ολοκλήρωση) - Άσκηση 03</p>
+            <div><a href="https://www.youtube.com/watch?v=S4eLP9IgSzc" target="_blank">https://www.youtube.com/watch?v=S4eLP9IgSzc</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">3.04 Ορισμένο Ολοκλήρωμα (B.Παραγοντική Ολοκλήρωση) - Άσκηση 04</p>
+            <div><a href="https://www.youtube.com/watch?v=x6wA4O5rBu0" target="_blank">https://www.youtube.com/watch?v=x6wA4O5rBu0</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">3.04 Ορισμένο Ολοκλήρωμα - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=u8zSJsJ4I3o" target="_blank">https://www.youtube.com/watch?v=u8zSJsJ4I3o</a></div>
+                        <hr class="pros-divider">
+        </div>
+    </div>
+
+    <div class="pros-section">
+        <h2 class="pros-section-title">3.07 Εμβαδόν επίπεδου χωρίου</h2>
+        <div class="pros-playlist-info">
+            Σύνολο βίντεο: 5
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">3.07 Εμβαδόν χωρίου (Α.Μία συνάρτηση) - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=X1dfDQSzfUo" target="_blank">https://www.youtube.com/watch?v=X1dfDQSzfUo</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">3.07 Εμβαδόν χωρίου (Α.Μία συνάρτηση) - Άσκηση 02</p>
+            <div><a href="https://www.youtube.com/watch?v=80_HKECYKhg" target="_blank">https://www.youtube.com/watch?v=80_HKECYKhg</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">3.07 Εμβαδόν χωρίου (Α.Μία συνάρτηση) - Άσκηση 03</p>
+            <div><a href="https://www.youtube.com/watch?v=38AZnTWIfO8" target="_blank">https://www.youtube.com/watch?v=38AZnTWIfO8</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">3.07 Εμβαδόν χωρίου (Β.Δύο συναρτήσεις) - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=bN49jYSFNDw" target="_blank">https://www.youtube.com/watch?v=bN49jYSFNDw</a></div>
+                        <hr class="pros-divider">
+        </div>
+
+        <div class="pros-video">
+            <p class="pros-video-title">3.07 Εμβαδόν χωρίου (Γ.Τρεις συναρτήσεις) - Άσκηση 01</p>
+            <div><a href="https://www.youtube.com/watch?v=4Ss5-sEvcsU" target="_blank">https://www.youtube.com/watch?v=4Ss5-sEvcsU</a></div>
+                        <hr class="pros-divider">
+        </div>
+  </div>
+</div>
+
+<footer class="pros-footer" style="text-align:center; margin-top:40px; padding:20px; color:#666; background:rgba(255,255,255,0.9); border-radius:10px;">
+
+
+<footer>
+  <div class="footer-logo">ΜΑΘΗΜΑΤΙΚΑ · Γ΄ Λυκείου</div>
+  <div class="footer-copy">© 2024 @petrosch — Όλα τα δικαιώματα διατηρούνται</div>
+  <div class="footer-yt"><a href="https://www.youtube.com/@petrosch" target="_blank" rel="noopener">▶ YouTube</a></div>
+</footer>
+
+<script src="../js/shared.js"></script>
+</body>
+</html>
