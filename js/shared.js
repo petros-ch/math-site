@@ -11,7 +11,7 @@
 
   const inPages = location.pathname.includes('/pages/');
   const prefix = inPages ? '../' : '';
-  const rel = (href) => prefix + (inPages ? href.replace('pages/', '') : href);
+  const rel = (href) => inPages ? href.replace('pages/', '') : href;
 
   const dropdownItems = DROPDOWN_LINKS.map(l => `<li><a href="${rel(l.href)}">${l.label}</a></li>`).join('');
   const tailItems = TAIL_LINKS.map(l => `<li><a href="${rel(l.href)}">${l.label}</a></li>`).join('');
