@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Εξάσκηση στην Προπαίδεια</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eef4ff;
+    color: #1f2d4d;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+  }
+  .app {
+    width: 100%;
+    max-width: 640px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 24px rgba(31,45,77,.15);
+    padding: 24px;
+    text-align: center;
+  }
+  h1 { margin: 0 0 8px; font-size: 1.8rem; color: #2c5fd6; }
+  .options { margin-bottom: 12px; font-size: 1.1rem; }
+  select { font-size: 1.1rem; padding: 4px 8px; border-radius: 8px; border: 2px solid #b9c9ee; }
+  .scores {
+    display: flex; justify-content: center; gap: 24px;
+    font-size: 1.1rem; margin-bottom: 12px;
+  }
+  .scores span { background: #eef4ff; padding: 6px 14px; border-radius: 12px; }
+  .question {
+    font-size: 3.4rem; font-weight: 700; margin: 12px 0;
+    display: flex; justify-content: center; align-items: center; gap: 14px; flex-wrap: wrap;
+  }
+  #answer {
+    width: 150px; font-size: 3rem; text-align: center;
+    border: 3px solid #2c5fd6; border-radius: 14px; padding: 4px;
+    font-family: inherit; color: #1f2d4d;
+  }
+  #answer:focus { outline: none; border-color: #f59e0b; }
+  #feedback {
+    min-height: 3.2rem; font-size: 1.6rem; font-weight: 600; margin: 10px 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .ok { color: #15803d; }
+  .no { color: #c2410c; }
+  .pad {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    max-width: 360px; margin: 0 auto 14px;
+  }
+  button {
+    font-family: inherit; font-size: 1.8rem; border: none; border-radius: 14px;
+    padding: 14px 0; cursor: pointer; background: #dbe6ff; color: #1f2d4d;
+    touch-action: manipulation;
+  }
+  button:active { transform: scale(.96); }
+  .check { background: #2c5fd6; color: #fff; font-size: 1.5rem; }
+  .del { background: #fde2e2; }
+  .actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .actions button { font-size: 1.3rem; padding: 12px 24px; }
+  .skip { background: #f1f1f1; }
+  .reset { background: #fff3d6; }
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>✖️ Προπαίδεια</h1>
+
+  <div class="options">
+    <label for="table">Εξάσκηση σε: </label>
+    <select id="table">
+      <option value="all">Όλους τους πίνακες</option>
+      <option value="0">Πίνακας του 0</option>
+      <option value="1">Πίνακας του 1</option>
+      <option value="2">Πίνακας του 2</option>
+      <option value="3">Πίνακας του 3</option>
+      <option value="4">Πίνακας του 4</option>
+      <option value="5">Πίνακας του 5</option>
+      <option value="6">Πίνακας του 6</option>
+      <option value="7">Πίνακας του 7</option>
+      <option value="8">Πίνακας του 8</option>
+      <option value="9">Πίνακας του 9</option>
+      <option value="10">Πίνακας του 10</option>
+    </select>
+  </div>
+
+  <div class="scores">
+    <span>✅ Σωστές: <b id="correct">0</b></span>
+    <span>🔁 Προσπάθειες: <b id="tries">0</b></span>
+  </div>
+
+  <div class="question">
+    <span id="a"></span> × <span id="b"></span> =
+    <input id="answer" type="text" inputmode="numeric" autocomplete="off" maxlength="3" aria-label="Απάντηση">
+  </div>
+
+  <div id="feedback" aria-live="polite"></div>
+
+  <div class="pad">
+    <button data-n="7">7</button><button data-n="8">8</button><button data-n="9">9</button>
+    <button data-n="4">4</button><button data-n="5">5</button><button data-n="6">6</button>
+    <button data-n="1">1</button><button data-n="2">2</button><button data-n="3">3</button>
+    <button class="del" id="del">⌫</button><button data-n="0">0</button><button class="check" id="check">Έλεγχος</button>
+  </div>
+
+  <div class="actions">
+    <button class="skip" id="skip">Άλλη πράξη ➜</button>
+    <button class="reset" id="reset">Μηδενισμός</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  var praises = [
+    "Μπράβο! 🎉", "Σωστά! Συνέχισε έτσι! 👏", "Εξαιρετικά! 🌟",
+    "Τέλεια! 💪", "Πολύ σωστά! 😀", "Bravo! Είσαι σπουδαίος/α! 🏆"
+  ];
+  var retries = [
+    "Δεν πειράζει, προσπάθησε ξανά! 🙂", "Σχεδόν! Δοκίμασε πάλι! 🤔",
+    "Όχι ακριβώς. Σκέψου λίγο και ξαναδοκίμασε! 💡"
+  ];
+
+  var elA = document.getElementById("a");
+  var elB = document.getElementById("b");
+  var input = document.getElementById("answer");
+  var feedback = document.getElementById("feedback");
+  var elCorrect = document.getElementById("correct");
+  var elTries = document.getElementById("tries");
+  var tableSel = document.getElementById("table");
+
+  var correct = 0, tries = 0, a = 0, b = 0, locked = false, timer = null;
+
+  function rnd(n) { return Math.floor(Math.random() * (n + 1)); }
+
+  function newQuestion() {
+    var oa = a, ob = b, t = tableSel.value;
+    do {
+      if (t === "all") { a = rnd(10); b = rnd(10); }
+      else { a = parseInt(t, 10); b = rnd(10); if (Math.random() < 0.5) { var x = a; a = b; b = x; } }
+    } while (a === oa && b === ob);
+    elA.textContent = a;
+    elB.textContent = b;
+    input.value = "";
+    feedback.textContent = "";
+    feedback.className = "";
+    locked = false;
+    input.focus();
+  }
+
+  function check() {
+    if (locked) return;
+    var v = input.value.trim();
+    if (v === "") { feedback.className = "no"; feedback.textContent = "Γράψε την απάντησή σου!"; return; }
+    tries++;
+    elTries.textContent = tries;
+    if (parseInt(v, 10) === a * b) {
+      correct++;
+      elCorrect.textContent = correct;
+      feedback.className = "ok";
+      feedback.textContent = praises[rnd(praises.length - 1)];
+      locked = true;
+      timer = setTimeout(newQuestion, 1500);
+    } else {
+      feedback.className = "no";
+      feedback.textContent = retries[rnd(retries.length - 1)];
+      input.select();
+    }
+  }
+
+  function addDigit(d) {
+    if (locked) return;
+    if (input.value.length < 3) input.value += d;
+    input.focus();
+  }
+
+  document.querySelectorAll(".pad button[data-n]").forEach(function (btn) {
+    btn.addEventListener("click", function () { addDigit(btn.getAttribute("data-n")); });
+  });
+  document.getElementById("del").addEventListener("click", function () {
+    if (locked) return;
+    input.value = input.value.slice(0, -1);
+    input.focus();
+  });
+  document.getElementById("check").addEventListener("click", check);
+  document.getElementById("skip").addEventListener("click", function () { clearTimeout(timer); newQuestion(); });
+  document.getElementById("reset").addEventListener("click", function () {
+    clearTimeout(timer);
+    correct = 0; tries = 0;
+    elCorrect.textContent = 0; elTries.textContent = 0;
+    newQuestion();
+  });
+  tableSel.addEventListener("change", function () { clearTimeout(timer); newQuestion(); });
+
+  input.addEventListener("input", function () { input.value = input.value.replace(/[^0-9]/g, ""); });
+  input.addEventListener("keydown", function (e) { if (e.key === "Enter") check(); });
+
+  newQuestion();
+})();
+</script>
+</body>
+</html>
